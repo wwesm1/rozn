@@ -1,0 +1,547 @@
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 15px;
+    }
+
+    .nav__list {
+        gap: 20px;
+    }
+
+    .nav__item {
+        gap: 20px;
+    }
+
+    .features-item {
+        background-color: var(--pure-white);
+        border-radius: 30px;
+        padding: 20px;
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .features-item-one {
+        grid-column: span 3 / span 3;
+        grid-row: span 2 / span 2;
+    }
+
+    .features-item-two {
+        grid-column: span 3 / span 3;
+        grid-row: span 2 / span 2;
+        grid-column-start: 4;
+    }
+
+    .features-item-three {
+        grid-column: span 2 / span 2;
+        grid-row: span 3 / span 3;
+        grid-row-start: 3;
+    }
+
+    .features-item-four {
+        grid-column: span 2 / span 2;
+        grid-row: span 3 / span 3;
+        grid-column-start: 3;
+        grid-row-start: 3;
+    }
+
+    .features-item-five {
+        grid-column: span 2 / span 2;
+        grid-row: span 3 / span 3;
+        grid-column-start: 5;
+        grid-row-start: 3;
+        margin-bottom: 6rem;
+    }
+
+    .features-item-six {
+        grid-column: span 3 / span 3;
+        grid-row: span 2 / span 2;
+        grid-row-start: 6;
+    }
+
+    .features-item-seven {
+        grid-column: span 3 / span 3;
+        grid-row: span 2 / span 2;
+        grid-column-start: 4;
+        grid-row-start: 6;
+    }
+    
+    .features-item-image {
+        font-size: var(--fs-18);
+        max-width: 200px;
+    }
+
+    .features-item-image img {
+        width: 50px;
+    }
+
+    .maximum {
+        padding: 10px;
+    }
+
+    .features-description {
+        font-size: var(--fs-14);
+    }
+
+    .special__features {
+        flex-direction: column;
+    }
+
+    .special__features button {
+        width: 90%;
+        margin-top: 1rem;
+    }
+
+    .benifit-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popular__products--cards {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .greenish {
+        padding: 2rem 20px;
+    }
+
+    .more-link {
+        margin: 0;
+    }
+
+    .left,
+    .right {
+        display: none;
+    }
+
+    .contact-us {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .green-card{
+        width: 700px;
+        padding: 35px;
+    }
+
+    .contact-us-one {
+        padding: 2rem 0 0 30px;
+    }
+
+    .card {
+        width: 400px;
+    }
+
+    .store-types {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-side {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .one-photo {
+        display: none;
+    }
+
+    .two-photos {
+        display: block;
+    }
+
+    .card {
+        width: 800px;
+    }
+
+    .for-others {
+        flex-direction: column;
+    }
+
+    .first-side img {
+        width: 700px;
+    }
+
+    .greenish-card button {
+        width: 300px;
+    }
+
+    .icon4,
+    .icon4-back {
+        display: none;
+    }
+
+    .icon1,
+    .icon2,
+    .icon3 {
+        display: block;
+        width: 80px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts--footer {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    r {
+        display: none;
+    }
+
+    .beautiful-card-title {
+        margin: 10px;
+    }
+
+    .read-more {
+        right: 1rem;
+    }
+
+    .beautiful-cards {
+        margin-left: -1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features-item {
+        height: 250px;
+        margin: 0;
+    }
+
+    .special__features {
+        padding: 30px;
+    }
+
+    .card {
+        width: 400px;
+    }
+
+    .store-types {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-side {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .one-photo {
+        display: none;
+    }
+
+    .two-photos {
+        display: block;
+    }
+
+    .card {
+        width: 370px;
+    }
+
+    .for-others {
+        flex-direction: column;
+    }
+
+    .greenish-card button {
+        width: 380px;
+    }
+
+    .card {
+        width: 700px;
+    }
+
+    .icon4,
+    .icon5,
+    .icon6,
+    .icon4-back {
+        display: none;
+    }
+
+    .icon1,
+    .icon2,
+    .icon3 {
+        display: block;
+        width: 80px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts--footer {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    r {
+        display: none;
+    }
+
+    .beautiful-card-title {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px 20px;
+    }
+
+    .nav__list {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .nav button {
+        display: none;
+    }
+
+    .rozn-icon {
+        width: 40px;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero__title {
+        font-size: var(--fs-30);
+    }
+
+    .hero__description--words {
+        font-size: var(--fs-14);
+    }
+
+    .hero-image {
+        margin-left: -1.2rem;
+    }
+
+    .hero button {
+        font-size: var(--fs-12);
+    }
+
+    .features {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .features-item {
+        width: 420px;
+    }
+
+    .special__features {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border-radius: 8px;
+        margin: 0 auto;
+        width: 370px;
+        padding: 2rem 15px;
+    }
+
+    .features-item {
+        height: 290px;
+        width: 370px;
+    }
+
+    .special__features--title {
+        gap: 30px;
+    }
+
+    .special__features button {
+        width: 100%;
+    }
+
+    .maximum {
+        padding: 10px;
+    }
+
+    .benifit-cards {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+    }
+
+    .benifit-card {
+        padding: 20px;
+        font-size: var(--fs-14);
+    }
+
+    .popular__products {
+        display: none;
+    }
+
+    .contact-us {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-us-one,
+    .green-card {
+        width: 350px;
+    }
+
+    .contact-us-title {
+        margin-top: 1rem;
+        font-size: var(--fs-20);
+    }
+
+    .if {
+        font-size: var(--fs-16);
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .text {
+        max-width: 300px;
+        margin: 0 auto;
+        font-size: var(--fs-14);
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .card {
+        width: 400px;
+    }
+
+    .store-types {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-side {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .one-photo {
+        display: none;
+    }
+
+    .two-photos {
+        display: block;
+    }
+
+    .card {
+        width: 370px;
+        padding: 20px;
+    }
+
+    .for-others {
+        flex-direction: column;
+    }
+
+    .contact-card {
+        flex-direction: column;
+    }
+
+    .second input {
+        width: 55%;
+    }
+
+    .button-side {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .click {
+        font-size: var(--fs-12);
+        width: 350px;
+    }
+
+    .button-side button {
+        width: 95%;
+    }
+    
+    .greenish-card,
+    .quetion {
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .quetion-title,
+    .greenish-card-title {
+        font-size: var(--fs-14);
+    }
+
+    .greenish-card {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .greenish-card button {
+        width: 300px;
+    }
+
+    .beautiful-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inteligence .left,
+    .inteligence .right {
+        display: none;
+    }
+
+    .beautiful-card-title {
+        margin: 1rem;
+    }
+
+    .icon4,
+    .icon5,
+    .icon6,
+    .icon4-back {
+        display: none;
+    }
+
+    .icon1,
+    .icon2,
+    .icon3 {
+        display: block;
+        width: 80px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts--footer {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    r {
+        display: none;
+    }
+}

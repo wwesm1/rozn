@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "Gilroy";
+    src: url('../assets/fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+
+    /* --- FONT SIZE */
+    --fs-24: 24px;
+    --fs-14: 14px;
+    --fs-60: 60px;
+    --fs-20: 20px;
+    --fs-16: 16px;
+    --fs-28: 28px;
+    --fs-26: 26px;
+    --fs-18: 18px;
+    --fs-30: 30px;
+    --fs-12: 12px;
+
+    /* --- FONT WEIGHT --- */
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+
+    /* --- LINEAR GRADIENT --- */
+    --green-gradient: linear-gradient(135deg, #43A548 0%, #52E259 100%);
+
+    /* --- COLOR --- */
+    --gunmetal: #2C2B35;
+    --flint: #6F7973;
+    --chateau-green: #43A548;
+    --pure-white: #FFFFFF;
+    --ghost-white: #F7F7F7;
+    --poppermint: #E2F7E2;
+    --snowy-mint: #ECF7EC;
+    --forest-green: #327F36;
+    --soft-green: #E1F7E2;
+    --screamin-green: #52E259;
+    --dark-slate-gray: #3D4641;
+    --light-gray: #838684;
+    --gray: #919999;
+
+    /* --- BOX SHADOW */
+    --bx-shw: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+
+    /* --- TRANSITION */
+    --tr: all 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Gilroy";
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 1rem auto;
+}
+
+.gradient-btn {
+    background-image: var(--green-gradient);
+    color: var(--pure-white);
+    border-radius: 1000px;
+    transition: var(--tr);
+}
+
+.gradient-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px -4px rgba(82, 226, 89, 0.6);
+}
