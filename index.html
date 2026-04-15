@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rozn</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link rel="icon" type="image/x-icon" href="./assets/svg/rozn-icon.svg">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/reset-style.css">
@@ -14,7 +14,7 @@
 
 <body>
     <header data-aos="fade-down" data-aos-duration="1000">
-        <nav class="nav container">
+        <nav class="nav container" id="nav_primary">
             <div class="header__icon-wrapper">
                 <a href="#">
                     <img src="./assets/svg/rozn-icon.svg" alt="this is rozn icon" class="rozn-icon">
@@ -22,7 +22,7 @@
                 <p class="nav__product">1С-Товары</p>
             </div>
             <div class="nav__item">
-                <ul class="nav__list">
+                <ul class="nav__list hidden">
                     <a href="#how-it-works">
                         <li>Как это работает</li>
                     </a>
@@ -42,10 +42,43 @@
                 <button class="gradient-btn" data-aos="zoom-in" data-aos-delay="600"
                     data-aos-duration="800">Вход</button>
                 <a href="#">
-                    <img src="./assets/svg/menu.svg" alt="this is a menu icon" class="menu">
+                    <img src="./assets/svg/menu.svg" alt="this is a menu icon" class="menu" id="click_menu">
                 </a>
             </div>
         </nav>
+        <nav class="nav container mobile_nav" id="nav_open">
+            <div class="header__icon-wrapper">
+                <a href="#">
+                    <img src="./assets/svg/rozn-icon.svg" alt="this is rozn icon" class="rozn-icon">
+                </a>
+                <p class="nav__product">1С-Товары</p>
+            </div>
+            <div class="nav__item">
+                <img src="./assets/svg/x.svg" alt="this is a menu icon" class="menu" id="x__icon">
+            </div>
+        </nav>
+        <div class="nav_mobiles">
+
+            <ul class="nav__list">
+                <a href="#how-it-works">
+                    <li>Как это работает</li>
+                </a>
+                <a href="#instruction">
+                    <li>Инструкции</li>
+                </a>
+                <a href="#products">
+                    <li>Продукты</li>
+                </a>
+                <a href="#base">
+                    <li>База знаний </li>
+                </a>
+                <a href="#about-us">
+                    <li>О нас</li>
+                </a>
+            </ul>
+            <button class="gradient-btn btn" data-aos="zoom-in" data-aos-delay="600"
+                data-aos-duration="800">Вход</button>
+        </div>
     </header>
     <main>
         <section class="hero container" id="how-it-works">
@@ -347,12 +380,14 @@
         <section class="maximum">
             <div class="store-types container">
                 <div class="first-side">
-                    <p class="section-title" data-aos="fade-right" data-aos-delay="100">Для розничных магазинов и ресторанов</p>
-                    <img src="./assets/images/Frame 430.png" class="two-photos" data-aos="fade-right" data-aos-delay="100">
+                    <p class="section-title" data-aos="fade-right" data-aos-delay="100">Для розничных магазинов и
+                        ресторанов</p>
+                    <img src="./assets/images/Frame 430.png" class="two-photos" data-aos="fade-right"
+                        data-aos-delay="100">
                     <img src="./assets/images/Grocery shopping-amico 1.png" alt="this is Grocery shop photo"
                         class="one-photo" data-aos="fade-right" data-aos-delay="100">
-                    <img src="./assets/images/Coffee shop-amico 1.png" alt="this is coffee shop photo"
-                        class="one-photo" data-aos="fade-right" data-aos-delay="400">
+                    <img src="./assets/images/Coffee shop-amico 1.png" alt="this is coffee shop photo" class="one-photo"
+                        data-aos="fade-right" data-aos-delay="400">
                 </div>
                 <div class="many-cards">
                     <div class="card" data-aos="fade-left" data-aos-delay="100">
@@ -417,7 +452,8 @@
             <div class="container for-others">
                 <div class="image-side">
                     <p class="section-title" data-aos="fade-right" data-aos-delay="100">Для оптовых поставщиков</p>
-                    <img src="./assets/images/logistics-image.png" alt="this is a logistics image" data-aos="fade-right" data-aos-delay="200">
+                    <img src="./assets/images/logistics-image.png" alt="this is a logistics image" data-aos="fade-right"
+                        data-aos-delay="200">
                 </div>
                 <div class="many-cards">
                     <div class="card" data-aos="fade-left" data-aos-delay="200">
@@ -489,14 +525,19 @@
                 <p class="section-title" data-aos="fade-right" data-aos-delay="100">Ответы на вопросы</p>
                 <div class="quetions">
                     <div class="quetion" data-aos="fade-up" data-aos-delay="100">
-                        <p class="quetion-title">С чего начать работу с 1С-Товары?</p>
-                        <a href="#">
+                        <div class="flex_icon">
+                            <p class="quetion-title">С чего начать работу с 1С-Товары?</p>
                             <svg class="help" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 6L15 12L9 18" stroke="#000" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
-                        </a>
+                        </div>
+                        <div class="faq__answer">
+                            <p>Для начала работы необходимо зарегистрироваться в сервисе через личный кабинет на портале
+                                1С:ИТС, скачать и установить модуль расширения для вашей конфигурации 1С и выполнить
+                                первичную синхронизацию данных о товарных остатках.</p>
+                        </div>
                     </div>
                     <div class="quetion" data-aos="fade-up" data-aos-delay="200">
                         <p class="quetion-title">Как подключить 1С-Ритейл Чекер* и 1С-Товары?</p>
@@ -551,7 +592,8 @@
                     <div class="greenish-card" data-aos="fade-up" data-aos-delay="700">
                         <p class="greenish-card-title">Переходи в раздел “Как это работает” , что бы получить больше
                             полезной информации</p>
-                        <button data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700">Как это работает</button>
+                        <button data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700">Как это
+                            работает</button>
                     </div>
                 </div>
             </div>
@@ -560,7 +602,8 @@
             <div class="inteligence container">
                 <div class="section--title">
                     <p class="section-title" data-aos="fade-right" data-aos-delay="100">База знаний </p>
-                    <button class="gradient-btn" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">Все статьи</button>
+                    <button class="gradient-btn" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">Все
+                        статьи</button>
                 </div>
                 <a href="#">
                     <svg class="left" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -609,7 +652,8 @@
         </section>
         <section class="maximum">
             <div class="companies container" data-aos="fade-up" data-aos-duration="800">
-                <p class="section-title" data-aos="fade-right" data-aos-delay="100">Компании которые выбирают 1С-Товары</p>
+                <p class="section-title" data-aos="fade-right" data-aos-delay="100">Компании которые выбирают 1С-Товары
+                </p>
                 <div class="companies-name">
                     <img src="./assets/svg/icon1.svg" alt="this is an icon" class="icon1">
                     <img src="./assets/svg/icon2.svg" alt="this is an icon" class="icon2">
@@ -690,8 +734,178 @@
             <p class="bottom">Сайт создан - <a href="#" class="smaller"> wtstudio.ru</a></p>
         </div>
     </footer>
+    <svg viewBox="0 0 400 580" xmlns="http://www.w3.org/2000/svg"
+        style="width:100%;max-width:380px;filter:drop-shadow(0 0 40px rgba(192,132,252,0.6))">
+        <defs>
+            <radialGradient id="bgGlow" cx="50%" cy="60%" r="50%">
+                <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.4"></stop>
+                <stop offset="100%" stop-color="#0f0a1e" stop-opacity="0"></stop>
+            </radialGradient>
+            <radialGradient id="skinGrad" cx="50%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#fde8d8"></stop>
+                <stop offset="100%" stop-color="#f4c5a8"></stop>
+            </radialGradient>
+            <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1a0533"></stop>
+                <stop offset="50%" stop-color="#2d1b69"></stop>
+                <stop offset="100%" stop-color="#581c87"></stop>
+            </linearGradient>
+            <linearGradient id="outfitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0c4a6e"></stop>
+                <stop offset="50%" stop-color="#1e1b4b"></stop>
+                <stop offset="100%" stop-color="#312e81"></stop>
+            </linearGradient>
+            <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#38bdf8"></stop>
+                <stop offset="100%" stop-color="#818cf8"></stop>
+            </linearGradient>
+            <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+                <feMerge>
+                    <feMergeNode in="blur"></feMergeNode>
+                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                </feMerge>
+            </filter>
+            <filter id="softGlow">
+                <feGaussianBlur stdDeviation="8" result="blur"></feGaussianBlur>
+                <feMerge>
+                    <feMergeNode in="blur"></feMergeNode>
+                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                </feMerge>
+            </filter>
+            <clipPath id="faceClip">
+                <ellipse cx="200" cy="148" rx="68" ry="75"></ellipse>
+            </clipPath>
+        </defs>
+        <ellipse cx="200" cy="320" rx="180" ry="260" fill="url(#bgGlow)"></ellipse>
+        <line x1="200" y1="200" x2="600" y2="200" stroke="rgba(192,132,252,0.05)" stroke-width="2"></line>
+        <line x1="200" y1="200" x2="506.41777724759123" y2="457.1150438746157" stroke="rgba(192,132,252,0.05)"
+            stroke-width="2"></line>
+        <line x1="200" y1="200" x2="269.45927106677215" y2="593.9231012048832" stroke="rgba(192,132,252,0.05)"
+            stroke-width="2"></line>
+        <line x1="200" y1="200" x2="8.526512829121202e-14" y2="546.4101615137755" stroke="rgba(192,132,252,0.05)"
+            stroke-width="2"></line>
+        <line x1="200" y1="200" x2="-175.87704831436332" y2="336.80805733026756" stroke="rgba(192,132,252,0.05)"
+            stroke-width="2"></line>
+        <line x1="200" y1="200" x2="-175.87704831436338" y2="63.191942669732526" stroke="rgba(192,132,252,0.05)"
+            stroke-width="2"></line>
+        <line x1="200" y1="200" x2="-1.7053025658242404e-13" y2="-146.4101615137754" stroke="rgba(192,132,252,0.05)"
+            stroke-width="2"></line>
+        <line x1="200" y1="200" x2="269.459271066772" y2="-193.92310120488327" stroke="rgba(192,132,252,0.05)"
+            stroke-width="2"></line>
+        <line x1="200" y1="200" x2="506.4177772475911" y2="-57.11504387461582" stroke="rgba(192,132,252,0.05)"
+            stroke-width="2"></line>
+        <path d="M120 340 Q130 280 160 260 Q200 250 240 260 Q270 280 280 340 L290 520 Q200 545 110 520 Z"
+            fill="url(#outfitGrad)"></path>
+        <path d="M170 280 L170 380" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.7"></path>
+        <path d="M230 280 L230 380" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.7"></path>
+        <path d="M155 320 L245 320" stroke="url(#accentGrad)" stroke-width="1" opacity="0.5"></path>
+        <path d="M160 350 L240 350" stroke="url(#accentGrad)" stroke-width="1" opacity="0.5"></path>
+        <path d="M168 262 Q200 280 232 262" stroke="#38bdf8" stroke-width="2" fill="none" filter="url(#glow)"></path>
+        <circle cx="200" cy="310" r="12" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.8"></circle>
+        <circle cx="200" cy="310" r="6" fill="#38bdf8" opacity="0.6" filter="url(#glow)"></circle>
+        <path d="M120 280 Q100 270 95 300 Q100 320 125 315 Q135 285 120 280Z" fill="#1e1b4b" stroke="#38bdf8"
+            stroke-width="1" opacity="0.9"></path>
+        <path d="M280 280 Q300 270 305 300 Q300 320 275 315 Q265 285 280 280Z" fill="#1e1b4b" stroke="#38bdf8"
+            stroke-width="1" opacity="0.9"></path>
+        <rect x="186" y="202" width="28" height="62" rx="12" fill="url(#skinGrad)"></rect>
+        <ellipse cx="200" cy="130" rx="82" ry="90" fill="url(#hairGrad)"></ellipse>
+        <path d="M118 130 Q90 200 100 280 Q130 260 145 220 Q150 170 130 130Z" fill="url(#hairGrad)"></path>
+        <path d="M282 130 Q310 200 300 280 Q270 260 255 220 Q250 170 270 130Z" fill="url(#hairGrad)"></path>
+        <path d="M118 150 Q85 230 90 320 Q95 380 100 420" stroke="#2d1b69" stroke-width="18" fill="none"
+            stroke-linecap="round"></path>
+        <path d="M282 150 Q315 230 310 320 Q305 380 300 420" stroke="#2d1b69" stroke-width="18" fill="none"
+            stroke-linecap="round"></path>
+        <path d="M125 180 Q100 260 108 340" stroke="#4c1d95" stroke-width="10" fill="none" stroke-linecap="round"
+            opacity="0.7"></path>
+        <path d="M275 180 Q300 260 292 340" stroke="#4c1d95" stroke-width="10" fill="none" stroke-linecap="round"
+            opacity="0.7"></path>
+        <path d="M140 80 Q160 60 200 55 Q240 60 260 80" stroke="#a855f7" stroke-width="3" fill="none" opacity="0.6"
+            filter="url(#glow)"></path>
+        <path d="M130 110 Q150 90 185 88" stroke="#c084fc" stroke-width="2" fill="none" opacity="0.5"></path>
+        <ellipse cx="200" cy="152" rx="70" ry="76" fill="url(#skinGrad)"></ellipse>
+        <path
+            d="M130 110 Q140 75 170 65 Q200 58 230 65 Q260 75 270 110 Q255 95 240 92 Q220 88 200 90 Q180 88 160 92 Q145 95 130 110Z"
+            fill="url(#hairGrad)"></path>
+        <path d="M130 110 Q125 130 128 150 Q132 120 145 115 Q155 130 148 160 Q155 135 165 130 Q172 148 168 170"
+            stroke="#1a0533" stroke-width="1" fill="url(#hairGrad)"></path>
+        <path d="M150 95 Q145 140 142 170" stroke="#2d1b69" stroke-width="8" fill="none" stroke-linecap="round"></path>
+        <path d="M175 92 Q173 130 172 155" stroke="#2d1b69" stroke-width="6" fill="none" stroke-linecap="round"
+            opacity="0.7"></path>
+        <ellipse cx="172" cy="150" rx="18" ry="16" fill="#0a0118"></ellipse>
+        <ellipse cx="172" cy="150" rx="14" ry="13" fill="#1e0a3c"></ellipse>
+        <circle cx="172" cy="150" r="9" fill="#7c3aed"></circle>
+        <circle cx="172" cy="150" r="6" fill="#a855f7"></circle>
+        <circle cx="172" cy="150" r="3.5" fill="#0f0a1e"></circle>
+        <circle cx="175" cy="146" r="3" fill="white" opacity="0.9"></circle>
+        <circle cx="169" cy="152" r="1.5" fill="white" opacity="0.5"></circle>
+        <path d="M154 142 Q160 138 167 137" stroke="#0a0118" stroke-width="2.5" fill="none" stroke-linecap="round">
+        </path>
+        <path d="M158 147 Q162 142 167 141" stroke="#0a0118" stroke-width="2" fill="none" stroke-linecap="round"></path>
+        <path d="M155 153 Q160 155 166 155" stroke="#0a0118" stroke-width="2.5" fill="none" stroke-linecap="round">
+        </path>
+        <path d="M154 142 Q172 135 190 142" stroke="#a855f7" stroke-width="1.5" fill="none" opacity="0.4"></path>
+        <ellipse cx="228" cy="150" rx="18" ry="16" fill="#0a0118"></ellipse>
+        <ellipse cx="228" cy="150" rx="14" ry="13" fill="#1e0a3c"></ellipse>
+        <circle cx="228" cy="150" r="9" fill="#7c3aed"></circle>
+        <circle cx="228" cy="150" r="6" fill="#a855f7"></circle>
+        <circle cx="228" cy="150" r="3.5" fill="#0f0a1e"></circle>
+        <circle cx="231" cy="146" r="3" fill="white" opacity="0.9"></circle>
+        <circle cx="225" cy="152" r="1.5" fill="white" opacity="0.5"></circle>
+        <path d="M246 142 Q240 138 233 137" stroke="#0a0118" stroke-width="2.5" fill="none" stroke-linecap="round">
+        </path>
+        <path d="M242 147 Q238 142 233 141" stroke="#0a0118" stroke-width="2" fill="none" stroke-linecap="round"></path>
+        <path d="M245 153 Q240 155 234 155" stroke="#0a0118" stroke-width="2.5" fill="none" stroke-linecap="round">
+        </path>
+        <path d="M246 142 Q228 135 210 142" stroke="#a855f7" stroke-width="1.5" fill="none" opacity="0.4"></path>
+        <path d="M154 132 Q172 124 188 128" stroke="#2d1b69" stroke-width="3.5" fill="none" stroke-linecap="round">
+        </path>
+        <path d="M212 128 Q228 124 246 132" stroke="#2d1b69" stroke-width="3.5" fill="none" stroke-linecap="round">
+        </path>
+        <path d="M196 168 Q200 176 204 168" stroke="#d4a49a" stroke-width="1.5" fill="none"></path>
+        <path d="M184 188 Q192 182 200 185 Q208 182 216 188 Q208 198 200 200 Q192 198 184 188Z" fill="#f472b6"></path>
+        <path d="M184 188 Q200 192 216 188" stroke="#ec4899" stroke-width="1" fill="none" opacity="0.5"></path>
+        <path d="M192 186 Q200 183 208 186" fill="rgba(255,255,255,0.2)"></path>
+        <ellipse cx="158" cy="168" rx="18" ry="10" fill="#f9a8d4" opacity="0.35"></ellipse>
+        <ellipse cx="242" cy="168" rx="18" ry="10" fill="#f9a8d4" opacity="0.35"></ellipse>
+        <ellipse cx="130" cy="160" rx="12" ry="16" fill="url(#skinGrad)"></ellipse>
+        <ellipse cx="270" cy="160" rx="12" ry="16" fill="url(#skinGrad)"></ellipse>
+        <circle cx="130" cy="170" r="5" fill="#a855f7" filter="url(#glow)"></circle>
+        <circle cx="270" cy="170" r="5" fill="#38bdf8" filter="url(#glow)"></circle>
+        <rect x="85" y="320" width="70" height="50" rx="6" fill="#0c1445" stroke="#38bdf8" stroke-width="1.5"
+            opacity="0.9"></rect>
+        <rect x="89" y="324" width="62" height="42" rx="4" fill="#060d30"></rect><text x="92" y="337" font-size="5"
+            fill="#38bdf8" font-family="monospace" opacity="0.9">&lt;div class=</text><text x="92" y="345" font-size="5"
+            fill="#818cf8" font-family="monospace" opacity="0.9"> "hero"&gt;</text><text x="92" y="353" font-size="5"
+            fill="#34d399" font-family="monospace" opacity="0.9"> color: #fff</text><text x="92" y="361" font-size="5"
+            fill="#f472b6" font-family="monospace" opacity="0.9">&lt;/div&gt;</text>
+        <rect x="85" y="320" width="70" height="50" rx="6" fill="none" stroke="#38bdf8" stroke-width="0.5" opacity="0.4"
+            filter="url(#glow)"></rect>
+        <path d="M122 270 Q90 300 88 340" stroke="url(#skinGrad)" stroke-width="22" fill="none" stroke-linecap="round">
+        </path>
+        <path d="M278 270 Q310 300 312 340" stroke="url(#skinGrad)" stroke-width="22" fill="none"
+            stroke-linecap="round"></path>
+        <path d="M90 325 Q88 335 92 345" stroke="#38bdf8" stroke-width="2" fill="none" opacity="0.7"
+            filter="url(#glow)"></path><text x="48" y="200" font-size="18" fill="#a855f7" font-family="serif"
+            opacity="0.6" filter="url(#softGlow)">美</text><text x="332" y="180" font-size="16" fill="#38bdf8"
+            font-family="serif" opacity="0.6" filter="url(#softGlow)">天</text><text x="55" y="260" font-size="14"
+            fill="#f472b6" font-family="serif" opacity="0.5" filter="url(#softGlow)">桜</text><text x="328" y="240"
+            font-size="14" fill="#818cf8" font-family="serif" opacity="0.5" filter="url(#softGlow)">才</text>
+        <ellipse cx="200" cy="200" rx="160" ry="40" fill="none" stroke="#38bdf8" stroke-width="0.5" opacity="0.2"
+            transform="rotate(-20, 200, 200)"></ellipse>
+        <ellipse cx="200" cy="200" rx="180" ry="50" fill="none" stroke="#a855f7" stroke-width="0.5" opacity="0.15"
+            transform="rotate(15, 200, 200)"></ellipse>
+        <circle cx="50" cy="150" r="3" fill="#38bdf8" opacity="0.7" filter="url(#glow)"></circle>
+        <circle cx="350" cy="140" r="3" fill="#a855f7" opacity="0.7" filter="url(#glow)"></circle>
+        <circle cx="40" cy="300" r="3" fill="#f472b6" opacity="0.7" filter="url(#glow)"></circle>
+        <circle cx="360" cy="290" r="3" fill="#34d399" opacity="0.7" filter="url(#glow)"></circle>
+        <circle cx="70" cy="400" r="3" fill="#818cf8" opacity="0.7" filter="url(#glow)"></circle>
+        <circle cx="330" cy="380" r="3" fill="#67e8f9" opacity="0.7" filter="url(#glow)"></circle>
+        <path d="M50 150 L200 200 L350 140" stroke="#38bdf8" stroke-width="0.5" fill="none" opacity="0.15"></path>
+        <path d="M40 300 L200 200 L360 290" stroke="#a855f7" stroke-width="0.5" fill="none" opacity="0.15"></path>
+    </svg>
 
-
+    <script src="./script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({

@@ -62,7 +62,7 @@
         grid-column-start: 4;
         grid-row-start: 6;
     }
-    
+
     .features-item-image {
         font-size: var(--fs-18);
         max-width: 200px;
@@ -98,7 +98,7 @@
         display: flex;
         flex-direction: column;
     }
-    
+
     .greenish {
         padding: 2rem 20px;
     }
@@ -118,7 +118,7 @@
         align-items: center;
     }
 
-    .green-card{
+    .green-card {
         width: 700px;
         padding: 35px;
     }
@@ -303,11 +303,57 @@
     }
 
     .nav__list {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .nav_mobiles {
         display: none;
+    }
+
+    #nav_open {
+        display: none;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .nav_mobiles.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        background: #f4f4f4;
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+
+    #nav_open.active {
+        display: flex;
+        position: relative;
+        z-index: 11;
     }
 
     .menu {
         display: block;
+    }
+
+    .nav {
+        visibility: visible;
+        display: flex;
+    }
+
+    .mobile_nav {
+        display: block;
+        display: flex;
+        margin-top: -4.7rem;
+    }
+
+    .btn {
+        display: block;
+        width: 75px;
+        height: 45px;
     }
 
     .nav button {
@@ -481,7 +527,7 @@
     .button-side button {
         width: 95%;
     }
-    
+
     .greenish-card,
     .quetion {
         border-radius: 20px;
