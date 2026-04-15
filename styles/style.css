@@ -752,7 +752,7 @@ html::-webkit-scrollbar-thumb {
     transform: scale(1.032);
 }
 
-.hidden {
+.hidden_image {
     overflow: hidden;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
