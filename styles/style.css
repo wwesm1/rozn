@@ -661,12 +661,25 @@ html::-webkit-scrollbar-thumb {
 }
 
 .faq__answer {
-    margin-top: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.faq__answer.active {
+    max-height: 300px; 
+    opacity: 1;
+}
+
+.faq__answer p {
+    padding-top: 15px; 
+    padding-bottom: 10px;
 }
 
 .help {
+    transition: transform 0.3s ease;
     cursor: pointer;
-    transition: var(--tr);
 }
 
 .help.active {
@@ -902,6 +915,7 @@ footer {
 .hidden {
     display: none;
 }
+
 .mobile_nav {
     display: none;
 }

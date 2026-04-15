@@ -16,8 +16,13 @@ function closeMenu(){
 navClickMenu.addEventListener('click', openMenu);
 navClickX.addEventListener('click', closeMenu);
 
-const helpIcon = document.querySelector('.help');
+const helpIcons = document.querySelectorAll('.help');
+const allAnswers = document.querySelectorAll('.faq__answer');
 
-helpIcon.addEventListener('click', function() {
-    this.classList.toggle('active');
+helpIcons.forEach((icon, index) => {
+    icon.addEventListener('click', function() {
+        icon.classList.toggle('active');
+        
+        allAnswers[index].classList.toggle('active');
+    });
 });
